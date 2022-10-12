@@ -15,7 +15,7 @@ Freq MHz      IRQ RC6 Power     IMC MiB/s           RCS/0           BCS/0       
 ```
 
 
-#### quickrtc.py
+#### webrtc2csv.py
 ```
    },
     "CIT01_111_minptime=10;useinbandfec=1-mimeType": {
