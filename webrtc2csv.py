@@ -1,26 +1,29 @@
 #!/bin/env python
 
+# quickly convert webrtc json values to csv
 
 import sys
 import json
 from datetime import datetime
 
+def datestamp():
+    year = str( datetime.now().year )
+    month = str( format( datetime.now().month, "02d" ))
+    day = str( format( datetime.now().day, "02d" ))
+    datestamp = ( year +'-'+ month +'-'+ day )
+    return( datestamp )
+
 def timestamp():
-# ->| return two date formats
-    Y = datetime.now().year
-    M = format( datetime.now().month, "02d" )
-    D = format( datetime.now().day, "02d" )
-    h = format( datetime.now().hour, "02d" )
-    m = format( datetime.now().minute, "02d" )
-    s = format( datetime.now().second, "02d" )
-
-    dstamp = ( str( Y ) +'-'+ str( M ) +'-'+ str ( D ))
-    tstamp = ( str( h ) + str( m ) + str ( s ))
-    return([ dstamp,tstamp ])
+    hour = str( format( datetime.now().hour, "02d" ))
+    minute = str( format( datetime.now().minute, "02d" ))
+    second = str( format( datetime.now().second, "02d" ))
+    timestamp = ( hour + minute + second )
+    return( timestamp )
 
 
+print( sys.argv[1] )
 
-filename = timestamp()[0] + '-webrtc_parse-' + timestamp()[1] + '.csv'
+filename = datestamp() + '--webrtc_parse--' + timestamp() + '.csv'
 with open( filename, 'w' ) as file:
     pass
 
