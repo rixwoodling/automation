@@ -2,7 +2,7 @@
 a collection of parsers converting raw data into csv
 
 
-#### intel_gpu_top.py
+#### intel_gpu_top2csv.py
 ```
 Freq MHz      IRQ RC6 Power     IMC MiB/s           RCS/0           BCS/0           VCS/0          VECS/0
  req  act       /s   %     W     rd     wr       %  se  wa       %  se  wa       %  se  wa       %  se  wa
